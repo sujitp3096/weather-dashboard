@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Dashboard</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Lottie -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body id="body">
+
+    <h1>🌤️ Weather Dashboard</h1>
+
+    <!-- Search -->
+    <form method="POST">
+        <input type="text" name="city" placeholder="Enter city..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Weather Card -->
+    <div class="card">
+        <h2>{{ city }}</h2>
+
+        <div id="icon"></div>
+
+        <h2>{{ temp }}°C</h2>
+        <p id="weather">{{ weather }}</p>
+        <p>{{ description }}</p>
+    </div>
+
+    <!-- Hidden data -->
+    <input type="hidden" id="sunrise" value="{{ sunrise }}">
+    <input type="hidden" id="sunset" value="{{ sunset }}">
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
