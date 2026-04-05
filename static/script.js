@@ -1,7 +1,6 @@
 window.onload = function () {
     let weather = document.getElementById("weather").innerText;
     let body = document.getElementById("body");
-
     // Get sunrise & sunset
     let sunrise = parseInt(document.getElementById("sunrise").value);
     let sunset = parseInt(document.getElementById("sunset").value);
