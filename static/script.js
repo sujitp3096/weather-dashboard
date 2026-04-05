@@ -5,7 +5,6 @@ window.onload = function () {
     let sunrise = parseInt(document.getElementById("sunrise").value);
     let sunset = parseInt(document.getElementById("sunset").value);
     let current = Math.floor(Date.now() / 1000);
-
     let isNight = current < sunrise || current > sunset;
 
     // 🌈 Background Logic
