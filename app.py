@@ -7,7 +7,7 @@ API_KEY = "6de4db636699a8a96bd2d9660f749dda"
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    city = "Pune"  # default cit
+    city = "Pune"  # default ci
 
     if request.method == "POST":
         city = request.form["city"].title()
